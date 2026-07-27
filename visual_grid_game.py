@@ -53,6 +53,7 @@ class VisualGridHuntGame:
             'opponent_positions': [list(op) for op in self.opponents],
             'smells_food': tuple(self.agent_pos) in self.food_positions,
             'hit_wall': tuple(self.agent_pos) in self.walls,
+            'smells_toxin': tuple(self.agent_pos) in self.toxic_traps, # New sensor
             'collision': self.collision,
             'score': self.score,
             'remaining_food': len(self.food_positions)
